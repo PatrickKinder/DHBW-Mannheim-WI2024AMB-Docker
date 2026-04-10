@@ -2,21 +2,21 @@ version: "3.9"
 
 services:
   math-api:
-    build: ./go
+    build: go
     container_name: math-api
     ports:
       - "5000:5000"
     restart: unless-stopped
 
   calculator-api:
-    build: ./js
+    build: js
     container_name: calculator-api
     ports:
       - "3000:3000"
     restart: unless-stopped
 
   trig-api:
-    build: ./python
+    build: python
     container_name: trig-api
     ports:
       - "4000:4000"
